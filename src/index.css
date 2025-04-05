@@ -48,4 +48,14 @@
   .bg-velada-pink {
     background-color: #f19fca;
   }
+
+  .mask-fade-top {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 80%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 80%);
+  }
+
+  .mask-fade-bottom {
+    mask-image: linear-gradient(to top, transparent 0%, black 20%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%);
+  }
 }
