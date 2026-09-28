@@ -2,10 +2,16 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Location from "./sections/Location";
 import Navbar from "./sections/Navbar";
+import Peleadores from "./sections/Peleadores";
 import PeleadoresIV from "./sections/PeleadoresIV";
 
 const App = () => {
-  if (window.location.pathname === "/peleadores-iv") {
+  const pathname = window.location.pathname.replace(/\/$/, "") || "/";
+
+  if (pathname === "/peleadores") {
+    return <Peleadores />;
+  }
+  if (pathname === "/peleadores-iv") {
     return <PeleadoresIV />;
   }
 
