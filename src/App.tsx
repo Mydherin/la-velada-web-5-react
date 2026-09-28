@@ -1,5 +1,6 @@
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
+import Location from "./sections/Location";
 import Navbar from "./sections/Navbar";
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           </p>
         </div>
       </section>
+      <Location />
       <div id="redes" className="scroll-mt-28">
         <Footer />
       </div>
