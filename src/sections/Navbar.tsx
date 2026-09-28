@@ -1,6 +1,6 @@
 const links = [
   { label: "Inicio", href: "#inicio" },
-  { label: "La velada", href: "#info" },
+  { label: "Quiénes somos", href: "#info" },
   { label: "Redes", href: "#redes" },
 ];
 
