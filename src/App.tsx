@@ -2,8 +2,13 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Location from "./sections/Location";
 import Navbar from "./sections/Navbar";
+import PeleadoresIV from "./sections/PeleadoresIV";
 
 const App = () => {
+  if (window.location.pathname === "/peleadores-iv") {
+    return <PeleadoresIV />;
+  }
+
   return (
     <div className="min-h-full scroll-smooth bg-velada-pink">
       <Navbar />

@@ -2,6 +2,7 @@ const links = [
   { label: "Inicio", href: "#inicio" },
   { label: "Quiénes somos", href: "#info" },
   { label: "Redes", href: "#redes" },
+  { label: "Peleadores IV", href: "/peleadores-iv" },
 ];
 
 const Navbar = () => {
