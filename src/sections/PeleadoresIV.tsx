@@ -1,3 +1,5 @@
+import { withBase } from "../paths";
+
 const fights = [
   { number: "01", left: "Carrera", right: "Agustín51", winner: "Agustín51", result: "Victoria" },
   { number: "02", left: "Guanyar", right: "La Cobra", winner: "La Cobra", result: "KO técnico" },
@@ -12,8 +14,8 @@ const PeleadoresIV = () => (
   <main className="min-h-screen overflow-hidden bg-[#160d18] text-white selection:bg-[#ff5b9a] selection:text-[#160d18]">
     <header className="fixed inset-x-0 top-0 z-20 px-4 pt-4 sm:px-8 sm:pt-6">
       <nav aria-label="Navegación principal" className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/15 bg-[#211522]/85 px-5 py-3 shadow-xl backdrop-blur-md sm:px-8">
-        <a href="/" className="text-sm font-black uppercase tracking-[0.16em] sm:text-base">La Velada <span className="text-[#ff5b9a]">· VI</span></a>
-        <a href="/" className="rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-white/75 transition hover:text-[#ff8db6] sm:text-xs">← Volver al inicio</a>
+        <a href={withBase("/")} className="text-sm font-black uppercase tracking-[0.16em] sm:text-base">La Velada <span className="text-[#ff5b9a]">· VI</span></a>
+        <a href={withBase("/")} className="rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-white/75 transition hover:text-[#ff8db6] sm:text-xs">← Volver al inicio</a>
       </nav>
     </header>
 

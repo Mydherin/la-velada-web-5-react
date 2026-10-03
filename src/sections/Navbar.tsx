@@ -1,19 +1,21 @@
+import { currentPath, withBase } from "../paths";
+
 const links = [
   { label: "Inicio", href: "#inicio" },
   { label: "Quiénes somos", href: "#info" },
   { label: "Redes", href: "#redes" },
-  { label: "Peleadores IV", href: "/peleadores-iv" },
-  { label: "Peleadores V", href: "/peleadores" },
+  { label: "Peleadores IV", href: withBase("/peleadores-iv") },
+  { label: "Peleadores V", href: withBase("/peleadores") },
 ];
 
 const Navbar = () => {
-  const pathname = window.location.pathname.replace(/\/$/, "") || "/";
+  const pathname = currentPath();
   const isFightersPage = pathname === "/peleadores" || pathname === "/peleadores-iv";
   const navigationLinks = isFightersPage
     ? [
-        { label: "Inicio", href: "/" },
-        { label: "Peleadores IV", href: "/peleadores-iv" },
-        { label: "Peleadores V", href: "/peleadores" },
+        { label: "Inicio", href: withBase("/") },
+        { label: "Peleadores IV", href: withBase("/peleadores-iv") },
+        { label: "Peleadores V", href: withBase("/peleadores") },
       ]
     : links;
 
@@ -24,7 +26,7 @@ const Navbar = () => {
         className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/40 bg-[#fff7fb]/80 px-5 py-3 text-[#4c1737] shadow-[0_8px_32px_rgba(67,18,49,0.12)] backdrop-blur-md sm:px-8"
       >
         <a
-          href={isFightersPage ? "/" : "#inicio"}
+          href={isFightersPage ? withBase("/") : "#inicio"}
           className="text-sm font-black uppercase tracking-[0.16em] transition-opacity hover:opacity-70 sm:text-base"
         >
           La Velada <span className="text-[#d63b83]">· VI</span>

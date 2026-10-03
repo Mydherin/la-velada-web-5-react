@@ -4,9 +4,10 @@ import Location from "./sections/Location";
 import Navbar from "./sections/Navbar";
 import Peleadores from "./sections/Peleadores";
 import PeleadoresIV from "./sections/PeleadoresIV";
+import { currentPath } from "./paths";
 
 const App = () => {
-  const pathname = window.location.pathname.replace(/\/$/, "") || "/";
+  const pathname = currentPath();
 
   if (pathname === "/peleadores") {
     return <Peleadores />;
